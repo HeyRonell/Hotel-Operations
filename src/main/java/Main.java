@@ -16,6 +16,27 @@ public class Main {
         System.out.println(res1.getReservationTotal());
 
         read.close();
+
+
+        Employee employee = new Employee(24, "Don Medina",
+                "Server", 40, 29.25);
+
+//    Shift 1
+        employee.clockIn(8);
+        employee.clockOut(24);
+
+//    Shift 2
+        employee.clockIn(8);
+        employee.clockOut(24);
+
+
+        System.out.println("\n=== Employee ===");
+        System.out.println("Employee Id: " + employee.getEmployeeID());
+        System.out.println("Employee Name: " + employee.getName());
+        System.out.println("Department: " + employee.getDepartment());
+        System.out.println("Regular Hours: " + employee.getHoursWorked());
+        System.out.println("Overtime: " + employee.getOvertimeHours());
+        System.out.println("Total Pay: $" + employee.getTotalPay());
     }
 
     public void display(String roomType, int numberOfNights) {
