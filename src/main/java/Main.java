@@ -10,16 +10,12 @@ public class Main {
         System.out.println("How many days would you like to stay?");
         int numberOfNights = read.nextInt();
 
-        read.nextLine();
-
         Reservation res1 = new Reservation(roomType, numberOfNights, false);
-        Room room101 = new Room(roomType, numberOfNights);
 
 
-        System.out.println();
+        System.out.println(res1.getReservationTotal());
 
-
-
+        read.close();
     }
 
     public void display(String roomType, int numberOfNights) {

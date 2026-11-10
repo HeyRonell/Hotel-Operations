@@ -11,9 +11,6 @@ public class Room {
         this.isAvailable = isAvailable;
     }
 
-    public Room(String roomType, int numberOfNights) {
-    }
-
     public int getNumberOfBeds() {
         return numberOfBeds;
     }
@@ -22,14 +19,16 @@ public class Room {
         return price;
     }
 
+    public boolean isOccupied() {
+        return isOccupied;
+    }
+
+    public boolean isDirty() {
+        return isDirty;
+    }
+
     public boolean isAvailable() {
-        if (!isOccupied && !isDirty) {
-            isAvailable = true;
-            return isAvailable;
-        } else {
-            isAvailable = false;
-            return isAvailable;
-        }
+        return !isOccupied && !isDirty;
     }
 }
 

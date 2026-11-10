@@ -5,19 +5,45 @@ public class Employee {
     private double payRate;
     private double hoursWorked;
 
-    public double totalPay() {
-        return hoursWorked * payRate;
+    private int startTime;
+
+    public Employee(int employeeID, String name, String department, double hoursWorked, double payRate) {
+        this.employeeID = employeeID;
+        this.name = name;
+        this.department = department;
+        this.hoursWorked = hoursWorked;
+        this.payRate = payRate;
+    }
+
+    public int getEmployeeID() {
+        return employeeID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public double getPayRate() {
+        return payRate;
+    }
+
+    public double getHoursWorked() {
+        return hoursWorked;
     }
 
     public double getRegularHours() {
-        return hoursWorked;
-        }
+        return Math.min(hoursWorked, 40);
+    }
 
     public double getOvertimeHours() {
-        double overTimeHours = 0;
-        if (hoursWorked > 40) {
-           overTimeHours = hoursWorked - 40;
-        }
-        return overTimeHours;
+        return Math.max(hoursWorked - 40, 0);
+    }
+
+    public double getTotalPay() {
+        return (getRegularHours() * payRate) + (getOvertimeHours() * payRate);
     }
 }
