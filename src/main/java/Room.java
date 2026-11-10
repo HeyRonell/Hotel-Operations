@@ -30,5 +30,20 @@ public class Room {
     public boolean isAvailable() {
         return !isOccupied && !isDirty;
     }
+    // check in and out
+
+    public void checkIn() {
+        if (isAvailable) { // after check in, the variables will below are set to true so that they an option anymore.
+            isOccupied = true;
+            isDirty = true;
+        }
+    }
+    // Separating these two since they are two different checks.
+    public void checkOut() {
+        isOccupied = false;
+    }
+    public void cleanRoom() {
+        isDirty = false;
+    }
 }
 

@@ -22,8 +22,6 @@ public class Reservation {
         this.roomType = roomType;
     }
 
-
-
     public int getNumberOfNights() {
         return numberOfNights;
     }
