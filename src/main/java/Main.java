@@ -24,15 +24,15 @@ public class Main {
                 "Server", 40, 29.25);
 
 //    Shift 1
-        employee.clockIn(8);
-        employee.clockOut(24);
+        employee.clockIn(1);
+        employee.clockOut(14);
 
 //    Shift 2
-        employee.clockIn(8);
-        employee.clockOut(24);
+        employee.clockIn(1);
+        employee.clockOut(14);
 
 
-        System.out.println("\n=== Employee ===");
+        System.out.println("\n==== Employee ====");
         System.out.println("Employee Id: " + employee.getEmployeeID());
         System.out.println("Employee Name: " + employee.getName());
         System.out.println("Department: " + employee.getDepartment());
@@ -43,7 +43,7 @@ public class Main {
 //        Setting up a new room.
         Room room = new Room(2, 150, false, false);
 
-        System.out.println("\n --- Room Information ---");
+        System.out.println("\n----| Room Information |----");
         System.out.println("Beds available: " + room.getNumberOfBeds());
         System.out.println("Price per night: " + room.getPrice());
         System.out.println("Availability: " + room.isAvailable());
